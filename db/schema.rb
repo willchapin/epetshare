@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140122144958) do
+ActiveRecord::Schema.define(:version => 20140123200739) do
 
   create_table "locations", :force => true do |t|
     t.integer  "user_id",    :null => false
@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(:version => 20140122144958) do
 
   add_index "pets", ["user_id", "name"], :name => "index_pets_on_user_id_and_name", :unique => true
 
-  create_table "times", :force => true do |t|
+  create_table "time_slots", :force => true do |t|
     t.integer  "user_id",    :null => false
     t.datetime "start_time", :null => false
     t.datetime "end_time",   :null => false
@@ -62,5 +62,5 @@ ActiveRecord::Schema.define(:version => 20140122144958) do
     t.datetime "created_at",                   :null => false
     t.datetime "updated_at",                   :null => false
   end
-  
+
 end
