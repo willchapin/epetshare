@@ -15,3 +15,8 @@
 /tmp
 
 /Gemfile.lock
+
+# Ignore partial files created by emacs
+
+*.#*
+*#*#
