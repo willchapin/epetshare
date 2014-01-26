@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(:version => 20140124165953) do
   create_table "pets", :force => true do |t|
     t.string   "name",             :null => false
     t.integer  "user_id",          :null => false
-    t.integer  "species",          :null => false
+    t.string   "species",          :null => false
     t.string   "food_preferences"
     t.boolean  "is_social"
     t.datetime "created_at",       :null => false
