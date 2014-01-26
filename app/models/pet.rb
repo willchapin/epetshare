@@ -1,5 +1,5 @@
 class Pet < ActiveRecord::Base
-  
+
   belongs_to :user
 
   attr_accessible :name, :user, :species, :food_preferences, :is_social
