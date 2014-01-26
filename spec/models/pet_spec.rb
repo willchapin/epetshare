@@ -36,13 +36,11 @@ describe Pet do
                      user: @user,
                      species: 'dog')
     
-    puts "USER: #{@user.inspect}"
-    puts "PET: #{@pet.inspect}"
     expect(badpet).to_not be_valid
   end
 
   it { should ensure_length_of(:name).is_at_most(30) }
   it { should belong_to(:user) }
 
-  it {should ensure_inclusion_of(:species).in_array(%w(cat dog)) }
+  it { should ensure_inclusion_of(:species).in_array(%w(cat dog)) }
 end
