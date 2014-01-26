@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140123200739) do
+ActiveRecord::Schema.define(:version => 20140124165953) do
 
   create_table "locations", :force => true do |t|
     t.integer  "user_id",    :null => false
