@@ -11,7 +11,6 @@ class User < ActiveRecord::Base
   validates_length_of :lastname, maximum: 15
 
   has_many :pets
-  has_many :locations
   has_many :time_slots
   has_many :sent_messages, class_name: 'Message', foreign_key: 'sender_id'
   has_many :received_messages, class_name: 'Message', foreign_key: 'recipient_id'
