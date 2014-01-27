@@ -5,7 +5,8 @@ describe TimeSlot do
   before(:all) do
     @user = User.create(firstname: 'tan',
                         lastname: 'tam',
-                        email: 'tan@tam.tom')    
+                        email: 'tan@tam.tom',
+                        password: 'sigh')    
     @pet = Pet.create(name: 'bubba the cloud',
                       user: @user,
                       species: 'dog')

@@ -4,7 +4,8 @@ describe Message do
 
   let(:user) { User.create(firstname: 'tan',
                            lastname: 'tam',
-                           email: 'tan@tam.tom') }
+                           email: 'tan@tam.tom',
+                           password: 'grumble') }
   
   it { should respond_to(:content) }
   it { should respond_to(:title) }
@@ -22,8 +23,8 @@ describe Message do
 
   it "checks that the sender is not the recipient" do
     message = user.sent_messages.create({ content: "I'm bad",
-                                                  title: "So bad",
-                                                  recipient: user })
+                                          title: "So bad",
+                                          recipient: user })
     expect(message).to_not be_valid
   end
 

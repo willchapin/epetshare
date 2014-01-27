@@ -4,7 +4,8 @@ describe Pet do
   before(:all) do
     @user = User.create(firstname: 'tan',
                         lastname: 'tam',
-                        email: 'tan@tam.tom')    
+                        email: 'tan@tam.tom',
+                        password: 'DOH')    
     @pet = Pet.create(name: 'bubba the cloud',
                       user: @user,
                       species: 'dog')

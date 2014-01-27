@@ -1,8 +1,8 @@
 class User < ActiveRecord::Base
 
-  attr_accessible :firstname, :lastname, :email, :paw_points
+  attr_accessible :firstname, :lastname, :email, :paw_points, :password
 
-  before_save :hash_password
+  has_secure_password
   
   validates_presence_of :firstname, :lastname, :email
   validates_format_of :email, with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
@@ -17,9 +17,4 @@ class User < ActiveRecord::Base
   
   has_one :location
 
-  private
-
-  def hash_password
-    self.password_hash = "asldifuh5"
-  end
 end

@@ -4,10 +4,11 @@ describe User do
 
   before(:all) { User.create(firstname: 'tan',
                              lastname: 'tam',
-                             email: 'tan@tam.tom') }
+                             email: 'tan@tam.tom',
+                             password: 'meep') }
 
   after(:all) { User.destroy_all }
- 
+
   it { should respond_to(:firstname) }
   it { should respond_to(:lastname) }
   it { should respond_to(:email) }
@@ -16,7 +17,8 @@ describe User do
   it { should allow_mass_assignment_of(:firstname) }
   it { should allow_mass_assignment_of(:lastname) }
   it { should allow_mass_assignment_of(:email) }  
-
+  it { should allow_mass_assignment_of(:password) }
+  
   it { should validate_presence_of(:firstname) }
   it { should validate_presence_of(:lastname) }
   it { should validate_presence_of(:email) }

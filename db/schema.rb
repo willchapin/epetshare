@@ -54,13 +54,13 @@ ActiveRecord::Schema.define(:version => 20140124165953) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "firstname",                    :null => false
-    t.string   "lastname",                     :null => false
-    t.string   "email",                        :null => false
-    t.string   "password_hash",                :null => false
-    t.integer  "paw_points",    :default => 0
-    t.datetime "created_at",                   :null => false
-    t.datetime "updated_at",                   :null => false
+    t.string   "firstname",                      :null => false
+    t.string   "lastname",                       :null => false
+    t.string   "email",                          :null => false
+    t.string   "password_digest",                :null => false
+    t.integer  "paw_points",      :default => 0
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
   end
 
 end
