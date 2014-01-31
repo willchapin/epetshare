@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140124165953) do
+ActiveRecord::Schema.define(:version => 20140131030052) do
 
   create_table "locations", :force => true do |t|
     t.integer  "user_id",    :null => false
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(:version => 20140124165953) do
     t.boolean  "is_social"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
+    t.string   "breed"
   end
 
   add_index "pets", ["user_id", "name"], :name => "index_pets_on_user_id_and_name", :unique => true

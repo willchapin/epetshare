@@ -19,12 +19,14 @@ describe Pet do
   it { should respond_to(:name) }
   it { should respond_to(:user) }
   it { should respond_to(:species) }
+  it { should respond_to(:breed) }
   it { should respond_to(:food_preferences) }
   it { should respond_to(:is_social) }
   
   it { should allow_mass_assignment_of(:name) }
   it { should allow_mass_assignment_of(:user) }
   it { should allow_mass_assignment_of(:species) }
+  it { should allow_mass_assignment_of(:breed) }
   it { should allow_mass_assignment_of(:food_preferences) }
   it { should allow_mass_assignment_of(:is_social) }  
 

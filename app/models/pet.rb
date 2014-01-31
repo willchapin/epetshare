@@ -2,7 +2,7 @@ class Pet < ActiveRecord::Base
 
   belongs_to :user
 
-  attr_accessible :name, :user, :species, :food_preferences, :is_social
+  attr_accessible :name, :user, :species, :breed, :food_preferences, :is_social
 
   validates_presence_of :name, :user, :species
   validates_uniqueness_of :name, scoped: :user_id
