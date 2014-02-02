@@ -41,8 +41,6 @@ describe TimeSlot do
       @bad_time_slot = @user.time_slots.create(start_time: 2.days.ago,
                                                end_time: 1.day.ago,
                                                time_type: "sit")
-      puts "HEY!!! \n\n"
-      puts @bad_time_slot.errors.inspect
       expect(@bad_time_slot).to_not be_valid
     end
   end

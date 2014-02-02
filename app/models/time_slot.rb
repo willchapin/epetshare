@@ -6,7 +6,8 @@ class TimeSlot < ActiveRecord::Base
 
   validates_presence_of :user, :start_time, :end_time, :time_type
 
-  validate :no_overlap, :start_before_end
+  validate :no_overlap, if: "start_time && end_time && user"
+  validate :start_before_end, if: "start_time && end_time"
 
   private
 
