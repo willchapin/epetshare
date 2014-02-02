@@ -13,7 +13,7 @@ describe "Static Pages" do
     before { visit root_path }
     
     it { should have_selector("h1", text: "epetshare") }
-    it { should have_link("sign up", href: signup_path) }
+    it { should have_link("sign up", href: new_user_path) }
     it { should have_selector("form", text: "sign in")}
 
     context "with valid user" do
