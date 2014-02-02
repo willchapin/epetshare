@@ -13,6 +13,7 @@ group :development, :test do
   gem 'shoulda'
   gem 'pry'
   gem 'faker'
+  gem 'capybara'
 end
 
 # Gems used only for assets and not required
