@@ -37,4 +37,11 @@ describe User do
   it { should have_many(:sent_messages) }
   it { should have_many(:received_messages) }
   
+  it "downcases its email before saving" do
+    caps_user = User.create(firstname: 'foo',
+                lastname: 'bar',
+                email: 'FoObAr@FAKE.com',
+                password: 'meeeep')
+    expect(caps_user.email).to eq("foobar@fake.com")
+  end
 end
