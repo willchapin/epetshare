@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Temppetshare::Application.load_tasks
+Epetshare::Application.load_tasks
